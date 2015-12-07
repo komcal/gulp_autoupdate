@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css ">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+ 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="jumbotron">
+			<h1>MY first Page</h1>
+		</div>
+		<div id="tt"></div>
+		<h1>TEST text hello</h1>
+		<h1><small>TEST text hello</small></h1>
+		
+		
+</div>
+	</div>
+
+	<button id="btn">Click me</button>
+
+	
+	<script>
+		var b = document.getElementById("btn");
+		b.onclick = function(){
+			console.log("test");
+			var box = document.createElement("div");
+			box.className = "alert alert-success fade in";
+			document.getElementById('tt').appendChild(box);
+			var text = " Indicates a successful or positive action.";
+			box.innerHTML = '<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Success!</strong>' + text;
+			//box.appendChild('<strong>Success!</strong> Indicates a successful or positive action.');
+		}
+		
+
+	</script>
+</body>
+</html>
